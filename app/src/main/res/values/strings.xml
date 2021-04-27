@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">ExCovid19</string>
+    <string name="title_home">Home</string>
+    <string name="title_location">Location</string>
+    <string name="title_food">Food</string>
+    <string name="title_news">News</string>
 </resources>
