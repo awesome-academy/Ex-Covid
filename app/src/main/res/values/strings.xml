@@ -4,4 +4,21 @@
     <string name="title_location">Location</string>
     <string name="title_food">Food</string>
     <string name="title_news">News</string>
+    <string name="title_stay_home">Stay Home</string>
+    <string name="title_stay_safe">Stay Safe</string>
+    <string name="title_guidance">Protect Yourself By :</string>
+    <string name="description_image_content">Image Content</string>
+    <string name="title_wear_mask">Wear Mask</string>
+    <string name="title_clean_hand">Clean Hand</string>
+    <string name="title_social_distance">Social Distance</string>
+    <string name="title_about">About</string>
+    <string name="title_total_case">Total Case</string>
+    <string name="demo_10000">10000</string>
+    <string name="title_recover">Recover</string>
+    <string name="title_tested">Test</string>
+    <string name="demo_tested">100</string>
+    <string name="title_death">Death</string>
+    <string name="title_active">Active</string>
+    <string name="title_recover_chart">Recover Chart</string>
+    <string name="home_fragment">HomeFragment</string>
 </resources>
