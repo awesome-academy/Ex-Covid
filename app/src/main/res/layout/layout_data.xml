@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/dp_8">
+
+    <LinearLayout
+        android:id="@+id/linearTotal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_8"
+        android:background="@drawable/shape_total_view"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_24"
+        app:layout_constraintEnd_toEndOf="@id/guidelineVertical50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/demo_10000"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/sp_40"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textTitleTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_8"
+            android:gravity="center"
+            android:text="@string/title_total_case"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_24"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearRecover"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_8"
+        android:background="@drawable/shape_recover_view"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guidelineVertical50"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textRecover"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/demo_10000"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/sp_40"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textTitleRecover"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_8"
+            android:gravity="center"
+            android:text="@string/title_recover"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_24"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearTest"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_8"
+        android:background="@drawable/shape_tested_view"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_24"
+        app:layout_constraintEnd_toEndOf="@id/guidelineVertical33"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearTotal">
+
+        <TextView
+            android:id="@+id/textTest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/demo_tested"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/sp_32"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textTitleTest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_8"
+            android:gravity="center"
+            android:text="@string/title_tested"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_24"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearDeath"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_8"
+        android:background="@drawable/shape_tested_view"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_24"
+        app:layout_constraintEnd_toEndOf="@id/guidelineVertical67"
+        app:layout_constraintStart_toStartOf="@id/guidelineVertical33"
+        app:layout_constraintTop_toBottomOf="@id/linearTotal">
+
+        <TextView
+            android:id="@+id/textDeath"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/demo_tested"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/sp_32"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textTitleDeath"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_8"
+            android:gravity="center"
+            android:text="@string/title_death"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_24"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearActive"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_8"
+        android:background="@drawable/shape_tested_view"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guidelineVertical67"
+        app:layout_constraintTop_toBottomOf="@id/linearTotal">
+
+        <TextView
+            android:id="@+id/textActive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/demo_tested"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/sp_32"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textTitleActive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_8"
+            android:gravity="center"
+            android:text="@string/title_active"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_24"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVertical50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVertical33"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.33" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVertical67"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.67" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,4 +7,8 @@
     <color name="teal_700">#FF018786</color>
     <color name="color_azure_radiance">#00A6FF</color>
     <color name="color_heather">#27C0CCDA</color>
+    <color name="color_dodger_blue">#2196F3</color>
+    <color name="color_turquoise">#35E7CD</color>
+    <color name="color_carnation">#F95F62</color>
+    <color name="color_koromiko">#FFBA5C</color>
 </resources>
