@@ -1,278 +1,284 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/color_heather">
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="homeVM"
+            type="com.sun.excovid19.ui.home.HomeViewModel" />
+    </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constrainContainer"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@drawable/shape_content_home"
-        app:layout_constraintBottom_toBottomOf="@id/guidelineHorizontal30"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_heather">
 
-        <TextView
-            android:id="@+id/textContentHome"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dp_8"
-            android:layout_marginTop="@dimen/dp_24"
-            android:fontFamily="@font/bree_serif"
-            android:text="@string/title_stay_home"
-            android:textColor="@android:color/white"
-            android:textSize="@dimen/sp_32"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/textContentSafe"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dp_8"
-            android:fontFamily="@font/bree_serif"
-            android:text="@string/title_stay_safe"
-            android:textColor="@android:color/white"
-            android:textSize="@dimen/sp_32"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textContentHome" />
-
-        <ImageView
-            android:id="@+id/imageContent"
+        <ScrollView
+            android:id="@+id/scrollHome"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:contentDescription="@string/description_image_content"
-            android:src="@drawable/ic_home_guidance"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/textContentHome"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constrainData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constrainContainer"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/shape_content_home"
+                    app:layout_constraintDimensionRatio="2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/textContentHome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:layout_marginTop="@dimen/dp_24"
+                        android:fontFamily="@font/bree_serif"
+                        android:text="@string/title_stay_home"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/sp_32"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textContentSafe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:fontFamily="@font/bree_serif"
+                        android:text="@string/title_stay_safe"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/sp_32"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/textContentHome" />
+
+                    <ImageView
+                        android:id="@+id/imageContent"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:contentDescription="@string/description_image_content"
+                        android:src="@drawable/ic_home_guidance"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/textContentHome"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/textGuidance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_8"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:fontFamily="@font/bree_serif"
+                    android:text="@string/title_guidance"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/sp_16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/constrainContainer" />
+
+                <TextView
+                    android:id="@+id/textMask"
+                    style="@style/TextGuidanceStyle"
+                    android:layout_marginHorizontal="@dimen/dp_8"
+                    android:background="@drawable/shape_text_guidance"
+                    android:text="@string/title_wear_mask"
+                    app:layout_constraintBottom_toTopOf="@id/textAbout"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineVertical33"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageMask"
+                    style="@style/ImageGuidance"
+                    android:contentDescription="@string/description_image_content"
+                    android:src="@drawable/ic_mask"
+                    app:layout_constraintBottom_toBottomOf="@id/textMask"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineVertical33"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textGuidance" />
+
+                <TextView
+                    android:id="@+id/textHand"
+                    style="@style/TextGuidanceStyle"
+                    android:layout_marginHorizontal="@dimen/dp_8"
+                    android:background="@drawable/shape_text_guidance"
+                    android:text="@string/title_clean_hand"
+                    app:layout_constraintBottom_toTopOf="@id/textAbout"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineVertical67"
+                    app:layout_constraintStart_toStartOf="@id/guidelineVertical33" />
+
+                <ImageView
+                    android:id="@+id/imageHand"
+                    style="@style/ImageGuidance"
+                    android:contentDescription="@string/description_image_content"
+                    android:src="@drawable/ic_hand"
+                    app:layout_constraintBottom_toBottomOf="@id/textHand"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineVertical67"
+                    app:layout_constraintStart_toStartOf="@id/guidelineVertical33"
+                    app:layout_constraintTop_toBottomOf="@id/textGuidance" />
+
+                <TextView
+                    android:id="@+id/textDistance"
+                    style="@style/TextGuidanceStyle"
+                    android:layout_marginHorizontal="@dimen/dp_8"
+                    android:background="@drawable/shape_text_guidance"
+                    android:text="@string/title_social_distance"
+                    app:layout_constraintBottom_toTopOf="@id/textAbout"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/guidelineVertical67" />
+
+                <ImageView
+                    android:id="@+id/imageDistance"
+                    style="@style/ImageGuidance"
+                    android:contentDescription="@string/description_image_content"
+                    android:src="@drawable/ic_social"
+                    app:layout_constraintBottom_toBottomOf="@id/textMask"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/guidelineVertical67"
+                    app:layout_constraintTop_toBottomOf="@id/textGuidance" />
+
+                <TextView
+                    android:id="@+id/textAbout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_8"
+                    android:fontFamily="@font/bree_serif"
+                    android:paddingTop="@dimen/dp_8"
+                    android:text="@string/title_about"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/sp_16"
+                    app:layout_constraintBottom_toTopOf="@id/layoutAbout"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <include
+                    android:id="@+id/layoutAbout"
+                    layout="@layout/layout_data"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@id/textChartTitle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    bind:secondaryHomeVM="@{homeVM}" />
+
+                <TextView
+                    android:id="@+id/textChartTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_8"
+                    android:layout_marginBottom="@dimen/dp_8"
+                    android:fontFamily="@font/bree_serif"
+                    android:paddingTop="@dimen/dp_8"
+                    android:text="@string/title_recover_chart"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/sp_16"
+                    app:layout_constraintBottom_toTopOf="@id/chartRecover"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/chartRecover"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="@dimen/dp_8"
+                    android:layout_marginBottom="4dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineVertical50"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <View
+                    android:id="@+id/viewRecover"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_16"
+                    android:background="@drawable/shape_tested_view"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineVertical60"
+                    app:layout_constraintStart_toStartOf="@id/guidelineVertical50"
+                    app:layout_constraintTop_toTopOf="@id/chartRecover" />
+
+                <View
+                    android:id="@+id/viewDeath"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:background="@drawable/shape_recover_view"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineVertical60"
+                    app:layout_constraintStart_toStartOf="@id/guidelineVertical50"
+                    app:layout_constraintTop_toBottomOf="@id/viewRecover" />
+
+                <TextView
+                    android:id="@+id/texRecoverChartTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_8"
+                    android:layout_marginBottom="@dimen/dp_8"
+                    android:fontFamily="@font/bree_serif"
+                    android:paddingTop="@dimen/dp_8"
+                    android:text="@string/title_recover"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/sp_16"
+                    app:layout_constraintBottom_toBottomOf="@id/viewDeath"
+                    app:layout_constraintStart_toStartOf="@id/guidelineVertical60"
+                    app:layout_constraintTop_toTopOf="@id/viewDeath" />
+
+                <TextView
+                    android:id="@+id/texDeathChartTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_8"
+                    android:layout_marginBottom="@dimen/dp_8"
+                    android:fontFamily="@font/bree_serif"
+                    android:paddingTop="@dimen/dp_8"
+                    android:text="@string/title_death"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/sp_16"
+                    app:layout_constraintBottom_toBottomOf="@id/viewRecover"
+                    app:layout_constraintStart_toStartOf="@id/guidelineVertical60"
+                    app:layout_constraintTop_toTopOf="@id/viewRecover" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guidelineVertical33"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.33" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guidelineVertical50"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.5" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guidelineVertical60"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.60" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guidelineVertical67"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.67" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineHorizontal30"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.3" />
-
-    <ScrollView
-        android:id="@+id/scrollHome"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/guidelineHorizontal30">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constrainData"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:id="@+id/textGuidance"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp_8"
-                android:layout_marginTop="@dimen/dp_8"
-                android:fontFamily="@font/bree_serif"
-                android:text="@string/title_guidance"
-                android:textColor="@android:color/black"
-                android:textSize="@dimen/sp_16"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textMask"
-                style="@style/TextGuidanceStyle"
-                android:layout_marginHorizontal="@dimen/dp_8"
-                android:background="@drawable/shape_text_guidance"
-                android:text="@string/title_wear_mask"
-                app:layout_constraintBottom_toTopOf="@id/textAbout"
-                app:layout_constraintEnd_toEndOf="@id/guidelineVertical33"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <ImageView
-                android:id="@+id/imageMask"
-                style="@style/ImageGuidance"
-                android:contentDescription="@string/description_image_content"
-                android:src="@drawable/ic_mask"
-                app:layout_constraintBottom_toBottomOf="@id/textMask"
-                app:layout_constraintEnd_toEndOf="@id/guidelineVertical33"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/textGuidance" />
-
-            <TextView
-                android:id="@+id/textHand"
-                style="@style/TextGuidanceStyle"
-                android:layout_marginHorizontal="@dimen/dp_8"
-                android:background="@drawable/shape_text_guidance"
-                android:text="@string/title_clean_hand"
-                app:layout_constraintBottom_toTopOf="@id/textAbout"
-                app:layout_constraintEnd_toEndOf="@id/guidelineVertical67"
-                app:layout_constraintStart_toStartOf="@id/guidelineVertical33" />
-
-            <ImageView
-                android:id="@+id/imageHand"
-                style="@style/ImageGuidance"
-                android:contentDescription="@string/description_image_content"
-                android:src="@drawable/ic_hand"
-                app:layout_constraintBottom_toBottomOf="@id/textHand"
-                app:layout_constraintEnd_toEndOf="@id/guidelineVertical67"
-                app:layout_constraintStart_toStartOf="@id/guidelineVertical33"
-                app:layout_constraintTop_toBottomOf="@id/textGuidance" />
-
-            <TextView
-                android:id="@+id/textDistance"
-                style="@style/TextGuidanceStyle"
-                android:layout_marginHorizontal="@dimen/dp_8"
-                android:background="@drawable/shape_text_guidance"
-                android:text="@string/title_social_distance"
-                app:layout_constraintBottom_toTopOf="@id/textAbout"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@id/guidelineVertical67" />
-
-            <ImageView
-                android:id="@+id/imageDistance"
-                style="@style/ImageGuidance"
-                android:contentDescription="@string/description_image_content"
-                android:src="@drawable/ic_social"
-                app:layout_constraintBottom_toBottomOf="@id/textMask"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@id/guidelineVertical67"
-                app:layout_constraintTop_toBottomOf="@id/textGuidance" />
-
-            <TextView
-                android:id="@+id/textAbout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp_8"
-                android:fontFamily="@font/bree_serif"
-                android:paddingTop="@dimen/dp_8"
-                android:text="@string/title_about"
-                android:textColor="@android:color/black"
-                android:textSize="@dimen/sp_16"
-                app:layout_constraintBottom_toTopOf="@id/layoutAbout"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <include
-                android:id="@+id/layoutAbout"
-                layout="@layout/layout_data"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toTopOf="@id/textChartTitle"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <TextView
-                android:id="@+id/textChartTitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp_8"
-                android:layout_marginBottom="@dimen/dp_8"
-                android:fontFamily="@font/bree_serif"
-                android:paddingTop="@dimen/dp_8"
-                android:text="@string/title_recover_chart"
-                android:textColor="@android:color/black"
-                android:textSize="@dimen/sp_16"
-                app:layout_constraintBottom_toTopOf="@id/chartRecover"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <com.github.mikephil.charting.charts.PieChart
-                android:id="@+id/chartRecover"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginStart="@dimen/dp_8"
-                android:layout_marginBottom="@dimen/dp_8"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintDimensionRatio="1"
-                app:layout_constraintEnd_toEndOf="@id/guidelineVertical50"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <View
-                android:id="@+id/viewRecover"
-                android:layout_width="0dp"
-                android:layout_height="@dimen/dp_16"
-                android:background="@drawable/shape_tested_view"
-                app:layout_constraintEnd_toEndOf="@id/guidelineVertical60"
-                app:layout_constraintStart_toStartOf="@id/guidelineVertical50"
-                app:layout_constraintTop_toTopOf="@id/chartRecover" />
-
-            <View
-                android:id="@+id/viewDeath"
-                android:layout_width="0dp"
-                android:layout_height="@dimen/dp_16"
-                android:layout_marginTop="@dimen/dp_16"
-                android:background="@drawable/shape_recover_view"
-                app:layout_constraintEnd_toEndOf="@id/guidelineVertical60"
-                app:layout_constraintStart_toStartOf="@id/guidelineVertical50"
-                app:layout_constraintTop_toBottomOf="@id/viewRecover" />
-
-            <TextView
-                android:id="@+id/texRecoverChartTitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp_8"
-                android:layout_marginBottom="@dimen/dp_8"
-                android:fontFamily="@font/bree_serif"
-                android:paddingTop="@dimen/dp_8"
-                android:text="@string/title_recover"
-                android:textColor="@android:color/black"
-                android:textSize="@dimen/sp_16"
-                app:layout_constraintBottom_toBottomOf="@id/viewDeath"
-                app:layout_constraintStart_toStartOf="@id/guidelineVertical60"
-                app:layout_constraintTop_toTopOf="@id/viewDeath" />
-
-            <TextView
-                android:id="@+id/texDeathChartTitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp_8"
-                android:layout_marginBottom="@dimen/dp_8"
-                android:fontFamily="@font/bree_serif"
-                android:paddingTop="@dimen/dp_8"
-                android:text="@string/title_death"
-                android:textColor="@android:color/black"
-                android:textSize="@dimen/sp_16"
-                app:layout_constraintBottom_toBottomOf="@id/viewRecover"
-                app:layout_constraintStart_toStartOf="@id/guidelineVertical60"
-                app:layout_constraintTop_toTopOf="@id/viewRecover" />
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guidelineVertical33"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.33" />
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guidelineVertical50"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.5" />
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guidelineVertical60"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.60" />
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guidelineVertical67"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.67" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
