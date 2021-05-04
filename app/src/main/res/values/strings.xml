@@ -15,10 +15,21 @@
     <string name="title_total_case">Total Case</string>
     <string name="demo_10000">10000</string>
     <string name="title_recover">Recover</string>
-    <string name="title_tested">Test</string>
+    <string name="title_tested">Tested</string>
     <string name="demo_tested">100</string>
     <string name="title_death">Death</string>
     <string name="title_active">Active</string>
     <string name="title_recover_chart">Recover Chart</string>
     <string name="home_fragment">HomeFragment</string>
+    <string name="title_day">Day</string>
+    <string name="title_week">Week</string>
+    <string name="title_total">Total</string>
+    <string name="text_contract">You have Symptom</string>
+    <string name="text_location_contract">Contact Us If</string>
+    <string name="title_contract">Contract</string>
+    <string name="title_search">Search</string>
+    <string name="text_vietnam">Viet Nam</string>
+    <string name="title_critical">Critical</string>
+    <string name="title_death_ratio">Death Ratio</string>
+    <string name="title_recover_ratio">Recover Ratio</string>
 </resources>
