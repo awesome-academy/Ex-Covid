@@ -45,6 +45,5 @@ class HomeViewModel(
                 _ratioData.value = this
             }
         }
-
     }
 }

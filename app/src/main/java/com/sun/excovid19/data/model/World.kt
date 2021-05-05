@@ -7,6 +7,8 @@ data class World(
     val totalCases: String,
     @field:Json(name = "active_cases")
     val activeCases: String,
+    @field:Json(name = "critical")
+    val critical: String,
     @field:Json(name = "deaths")
     val deaths: String,
     @field:Json(name = "recovered")
@@ -16,5 +18,6 @@ data class World(
     @field:Json(name = "death_ratio")
     val deathsRatio: Float,
     @field:Json(name = "recovery_ratio")
-    val recoverRatio: Float
+    val recoverRatio: Float,
+    var date: String
 )

@@ -3,6 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+
+        <variable
+            name="locationVM"
+            type="com.sun.excovid19.ui.location.LocationViewModel" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -95,6 +102,7 @@
                         style="@style/TextViewDataTitle"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="@dimen/dp_8"
+                        android:text="@{locationVM.currentData.totalCases}"
                         android:textSize="@dimen/sp_24" />
 
                     <TextView
@@ -119,6 +127,7 @@
                         android:id="@+id/textRecover"
                         style="@style/TextViewDataTitle"
                         android:layout_marginHorizontal="@dimen/dp_8"
+                        android:text="@{locationVM.currentData.recovered}"
                         android:textSize="@dimen/sp_24" />
 
                     <TextView
@@ -143,6 +152,7 @@
                         android:id="@+id/textTest"
                         style="@style/TextViewDataTitle"
                         android:layout_marginHorizontal="@dimen/dp_8"
+                        android:text="@{locationVM.currentData.tested}"
                         android:textSize="@dimen/sp_16" />
 
                     <TextView
@@ -167,6 +177,7 @@
                         android:id="@+id/textDeath"
                         style="@style/TextViewDataTitle"
                         android:layout_marginHorizontal="@dimen/dp_8"
+                        android:text="@{locationVM.currentData.deaths}"
                         android:textSize="@dimen/sp_16" />
 
                     <TextView
@@ -191,6 +202,7 @@
                         android:id="@+id/textActive"
                         style="@style/TextViewDataTitle"
                         android:layout_marginHorizontal="@dimen/dp_8"
+                        android:text="@{locationVM.currentData.critical}"
                         android:textSize="@dimen/sp_16" />
 
                     <TextView
