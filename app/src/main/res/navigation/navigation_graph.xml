@@ -6,10 +6,8 @@
 
     <fragment
         android:id="@+id/navigationHome"
-        android:name="com.sun.excovid19.ui.home.HomeFragment"
-        android:label="@string/home_fragment" />
+        android:name="com.sun.excovid19.ui.home.HomeFragment"/>
     <fragment
         android:id="@+id/navigationLocation"
-        android:name="com.sun.excovid19.ui.location.LocationFragment"
-        android:label="@string/location_fragment" />
+        android:name="com.sun.excovid19.ui.location.LocationFragment"/>
 </navigation>
