@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_bottom_sheet"
+        android:paddingTop="@dimen/dp_16"
+        android:paddingBottom="@dimen/dp_24">
+
+        <View
+            android:id="@+id/viewTop"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_2"
+            android:layout_marginStart="@dimen/dp_120"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginEnd="@dimen/dp_120"
+            android:background="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textDate"
+            style="@style/TextViewLocationTitle"
+            android:layout_marginTop="@dimen/dp_8"
+            android:textSize="@dimen/sp_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewTop" />
+
+        <TextView
+            android:id="@+id/textTotalBottom"
+            style="@style/TextViewBottomSheet"
+            android:text="@string/title_total_case"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textDate" />
+
+        <TextView
+            android:id="@+id/textDeathBottom"
+            style="@style/TextViewBottomSheet"
+            android:text="@string/title_death"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textTotalBottom" />
+
+        <TextView
+            android:id="@+id/textRecoverBottom"
+            style="@style/TextViewBottomSheet"
+            android:text="@string/title_recover"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textDeathBottom" />
+
+        <TextView
+            android:id="@+id/textCriticalBottom"
+            style="@style/TextViewBottomSheet"
+            android:text="@string/title_critical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textRecoverBottom" />
+
+        <TextView
+            android:id="@+id/textTestedBottom"
+            style="@style/TextViewBottomSheet"
+            android:text="@string/title_tested"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textCriticalBottom" />
+
+        <TextView
+            android:id="@+id/textDeathRatioBottom"
+            style="@style/TextViewBottomSheet"
+            android:text="@string/title_death_ratio"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textTestedBottom" />
+
+        <TextView
+            android:id="@+id/textRecoverRatioBottom"
+            style="@style/TextViewBottomSheet"
+            android:text="@string/title_recover_ratio"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textDeathRatioBottom" />
+
+        <TextView
+            android:id="@+id/textTotalDataBottom"
+            style="@style/TextViewBottomSheetEnd"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textDate" />
+
+        <TextView
+            android:id="@+id/textDeathDataBottom"
+            style="@style/TextViewBottomSheetEnd"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textTotalDataBottom" />
+
+        <TextView
+            android:id="@+id/textRecoverDataBottom"
+            style="@style/TextViewBottomSheetEnd"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textDeathDataBottom" />
+
+        <TextView
+            android:id="@+id/textCriticalDataBottom"
+            style="@style/TextViewBottomSheetEnd"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textRecoverDataBottom" />
+
+        <TextView
+            android:id="@+id/textTestedDataBottom"
+            style="@style/TextViewBottomSheetEnd"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textCriticalDataBottom" />
+
+        <TextView
+            android:id="@+id/textDeathRatioDataBottom"
+            style="@style/TextViewBottomSheetEnd"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textTestedDataBottom" />
+
+        <TextView
+            android:id="@+id/textRecoverRatioDataBottom"
+            style="@style/TextViewBottomSheetEnd"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textDeathRatioDataBottom" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
