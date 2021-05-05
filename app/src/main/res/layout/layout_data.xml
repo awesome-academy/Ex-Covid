@@ -17,20 +17,23 @@
         <LinearLayout
             android:id="@+id/linearTotal"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_marginHorizontal="@dimen/dp_8"
+            android:layout_marginTop="@dimen/dp_8"
             android:background="@drawable/shape_total_view"
             android:gravity="center"
             android:orientation="vertical"
-            android:padding="@dimen/dp_24"
+            app:layout_constraintDimensionRatio="1.7"
             app:layout_constraintEnd_toEndOf="@id/guidelineVertical50"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
                 android:id="@+id/textTotal"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_8"
+                android:fontFamily="@font/bree_serif"
                 android:gravity="center"
                 android:text="@{secondaryHomeVM.worldData.totalCases}"
                 android:textColor="@android:color/black"
@@ -41,31 +44,34 @@
                 android:id="@+id/textTitleTotal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginVertical="@dimen/dp_8"
+                android:fontFamily="@font/bree_serif"
                 android:gravity="center"
                 android:text="@string/title_total_case"
                 android:textColor="@android:color/white"
-                android:textSize="@dimen/sp_24"
-                android:textStyle="bold" />
+                android:textSize="@dimen/sp_24" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/linearRecover"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_marginHorizontal="@dimen/dp_8"
+            android:layout_marginTop="@dimen/dp_8"
             android:background="@drawable/shape_recover_view"
             android:gravity="center"
             android:orientation="vertical"
-            android:padding="@dimen/dp_24"
+            app:layout_constraintDimensionRatio="1.7"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@id/guidelineVertical50"
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
                 android:id="@+id/textRecover"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_8"
+                android:fontFamily="@font/bree_serif"
                 android:gravity="center"
                 android:text="@{secondaryHomeVM.worldData.recovered}"
                 android:textColor="@android:color/black"
@@ -76,32 +82,32 @@
                 android:id="@+id/textTitleRecover"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dp_8"
-                android:gravity="center"
+                android:layout_marginVertical="@dimen/dp_8"
+                android:fontFamily="@font/bree_serif"
                 android:text="@string/title_recover"
                 android:textColor="@android:color/white"
-                android:textSize="@dimen/sp_24"
-                android:textStyle="bold" />
+                android:textSize="@dimen/sp_24" />
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/linearTest"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_marginHorizontal="@dimen/dp_8"
             android:layout_marginTop="@dimen/dp_8"
             android:background="@drawable/shape_tested_view"
             android:gravity="center"
             android:orientation="vertical"
-            android:padding="@dimen/dp_24"
+            app:layout_constraintDimensionRatio="1.5"
             app:layout_constraintEnd_toEndOf="@id/guidelineVertical33"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/linearTotal">
 
             <TextView
                 android:id="@+id/textTest"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_8"
+                android:fontFamily="@font/bree_serif"
                 android:gravity="center"
                 android:text="@{secondaryHomeVM.worldData.tested}"
                 android:textColor="@android:color/black"
@@ -112,32 +118,34 @@
                 android:id="@+id/textTitleTest"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginVertical="@dimen/dp_8"
+                android:fontFamily="@font/bree_serif"
                 android:gravity="center"
                 android:text="@string/title_tested"
                 android:textColor="@android:color/white"
-                android:textSize="@dimen/sp_16"
-                android:textStyle="bold" />
+                android:textSize="@dimen/sp_16" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/linearDeath"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_marginHorizontal="@dimen/dp_8"
             android:layout_marginTop="@dimen/dp_8"
             android:background="@drawable/shape_tested_view"
             android:gravity="center"
             android:orientation="vertical"
-            android:padding="@dimen/dp_24"
+            app:layout_constraintDimensionRatio="1.57"
             app:layout_constraintEnd_toEndOf="@id/guidelineVertical67"
             app:layout_constraintStart_toStartOf="@id/guidelineVertical33"
             app:layout_constraintTop_toBottomOf="@id/linearTotal">
 
             <TextView
                 android:id="@+id/textDeath"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_8"
+                android:fontFamily="@font/bree_serif"
                 android:gravity="center"
                 android:text="@{secondaryHomeVM.worldData.deaths}"
                 android:textColor="@android:color/black"
@@ -148,32 +156,34 @@
                 android:id="@+id/textTitleDeath"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginVertical="@dimen/dp_8"
+                android:fontFamily="@font/bree_serif"
                 android:gravity="center"
                 android:text="@string/title_death"
                 android:textColor="@android:color/white"
-                android:textSize="@dimen/sp_16"
-                android:textStyle="bold" />
+                android:textSize="@dimen/sp_16" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/linearActive"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_marginHorizontal="@dimen/dp_8"
             android:layout_marginTop="@dimen/dp_8"
             android:background="@drawable/shape_tested_view"
             android:gravity="center"
             android:orientation="vertical"
-            android:padding="@dimen/dp_24"
+            app:layout_constraintDimensionRatio="1.5"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@id/guidelineVertical67"
             app:layout_constraintTop_toBottomOf="@id/linearTotal">
 
             <TextView
                 android:id="@+id/textActive"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_8"
+                android:fontFamily="@font/bree_serif"
                 android:gravity="center"
                 android:text="@{secondaryHomeVM.worldData.activeCases}"
                 android:textColor="@android:color/black"
@@ -184,12 +194,12 @@
                 android:id="@+id/textTitleActive"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginVertical="@dimen/dp_8"
+                android:fontFamily="@font/bree_serif"
                 android:gravity="center"
                 android:text="@string/title_active"
                 android:textColor="@android:color/white"
-                android:textSize="@dimen/sp_16"
-                android:textStyle="bold" />
+                android:textSize="@dimen/sp_16" />
         </LinearLayout>
 
         <androidx.constraintlayout.widget.Guideline
