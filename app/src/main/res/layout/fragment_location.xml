@@ -15,12 +15,11 @@
         android:layout_height="match_parent"
         android:background="@color/color_heather">
 
-        <LinearLayout
-            android:id="@+id/linearSearch"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constrainSearch"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:background="@color/color_azure_radiance"
-            android:orientation="vertical"
             app:layout_constraintDimensionRatio="3.5"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -28,14 +27,11 @@
 
             <EditText
                 android:id="@+id/textSearch"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dp_8"
                 android:autofillHints="@string/title_search"
                 android:background="@android:color/white"
-                android:drawableEnd="@drawable/ic_search"
-                android:drawablePadding="@dimen/dp_8"
-                android:drawableTint="@android:color/black"
                 android:fontFamily="@font/bree_serif"
                 android:hint="@string/title_search"
                 android:inputType="text"
@@ -43,9 +39,25 @@
                 android:textColor="@android:color/black"
                 android:textColorHint="@android:color/black"
                 android:textSize="@dimen/sp_16"
+                app:layout_constraintEnd_toStartOf="@id/imageSearch"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="LabelFor" />
 
-        </LinearLayout>
+            <ImageView
+                android:id="@+id/imageSearch"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="@dimen/dp_8"
+                android:background="@android:color/white"
+                android:src="@drawable/ic_search"
+                app:layout_constraintBottom_toBottomOf="@id/textSearch"
+                app:layout_constraintDimensionRatio="1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/textSearch"
+                app:tint="@android:color/black" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView
             android:id="@+id/textLocation"
@@ -55,13 +67,13 @@
             android:fontFamily="@font/bree_serif"
             android:paddingHorizontal="@dimen/dp_24"
             android:paddingVertical="@dimen/dp_4"
-            android:text="@string/text_vietnam"
+            android:text="@{locationVM.countryName}"
             android:textColor="@android:color/black"
             android:textSize="@dimen/sp_24"
-            app:layout_constraintBottom_toBottomOf="@id/linearSearch"
-            app:layout_constraintEnd_toEndOf="@id/linearSearch"
-            app:layout_constraintStart_toStartOf="@id/linearSearch"
-            app:layout_constraintTop_toBottomOf="@id/linearSearch" />
+            app:layout_constraintBottom_toBottomOf="@id/constrainSearch"
+            app:layout_constraintEnd_toEndOf="@id/constrainSearch"
+            app:layout_constraintStart_toStartOf="@id/constrainSearch"
+            app:layout_constraintTop_toBottomOf="@id/constrainSearch" />
 
         <ScrollView
             android:id="@+id/scrollLocation"
@@ -209,7 +221,7 @@
                         android:id="@+id/textTitleActive"
                         style="@style/TextViewTitle"
                         android:layout_marginVertical="@dimen/dp_8"
-                        android:text="@string/title_active"
+                        android:text="@string/title_critical"
                         android:textSize="@dimen/sp_16" />
                 </LinearLayout>
 
@@ -228,7 +240,7 @@
                     android:layout_height="0dp"
                     android:layout_marginTop="@dimen/dp_8"
                     app:layout_constraintDimensionRatio="1.5"
-                    app:layout_constraintEnd_toEndOf="@id/guidelineVertical80"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/textWeek" />
 
@@ -236,55 +248,58 @@
                     android:id="@+id/viewTotal"
                     style="@style/ViewChart"
                     android:background="@color/color_koromiko"
-                    app:layout_constraintEnd_toEndOf="@id/guidelineVertical85"
-                    app:layout_constraintStart_toStartOf="@id/guidelineVertical80"
-                    app:layout_constraintTop_toBottomOf="@id/textWeek" />
+                    app:layout_constraintEnd_toEndOf="@id/guidelineVertical22"
+                    app:layout_constraintStart_toStartOf="@id/guidelineVertical15"
+                    app:layout_constraintTop_toBottomOf="@id/chartWeek" />
 
                 <TextView
                     android:id="@+id/textTotalChart"
                     style="@style/TextViewLocationTitle"
                     android:layout_marginStart="@dimen/dp_4"
+                    android:layout_marginTop="@dimen/dp_4"
                     android:text="@string/title_total"
                     android:textSize="@dimen/sp_14"
-                    app:layout_constraintBottom_toBottomOf="@id/viewTotal"
-                    app:layout_constraintStart_toStartOf="@id/guidelineVertical85"
-                    app:layout_constraintTop_toTopOf="@id/viewTotal" />
+                    app:layout_constraintEnd_toEndOf="@id/viewTotal"
+                    app:layout_constraintStart_toStartOf="@id/viewTotal"
+                    app:layout_constraintTop_toBottomOf="@id/viewTotal" />
 
                 <View
                     android:id="@+id/viewDeath"
                     style="@style/ViewChart"
                     android:background="@color/color_azure_radiance"
-                    app:layout_constraintEnd_toEndOf="@id/guidelineVertical85"
-                    app:layout_constraintStart_toStartOf="@id/guidelineVertical80"
-                    app:layout_constraintTop_toBottomOf="@id/viewTotal" />
+                    app:layout_constraintEnd_toEndOf="@id/guidelineVertical47"
+                    app:layout_constraintStart_toStartOf="@id/guidelineVertical40"
+                    app:layout_constraintTop_toBottomOf="@id/chartWeek" />
 
                 <TextView
                     android:id="@+id/textDeathChart"
                     style="@style/TextViewLocationTitle"
                     android:layout_marginStart="@dimen/dp_4"
+                    android:layout_marginTop="@dimen/dp_4"
                     android:text="@string/title_death"
                     android:textSize="@dimen/sp_14"
-                    app:layout_constraintBottom_toBottomOf="@id/viewDeath"
-                    app:layout_constraintStart_toStartOf="@id/guidelineVertical85"
-                    app:layout_constraintTop_toTopOf="@id/viewDeath" />
+                    app:layout_constraintEnd_toEndOf="@id/viewDeath"
+                    app:layout_constraintStart_toStartOf="@id/viewDeath"
+                    app:layout_constraintTop_toBottomOf="@id/viewDeath" />
 
                 <View
                     android:id="@+id/viewRecover"
                     style="@style/ViewChart"
                     android:background="@color/color_carnation"
-                    app:layout_constraintEnd_toEndOf="@id/guidelineVertical85"
-                    app:layout_constraintStart_toStartOf="@id/guidelineVertical80"
-                    app:layout_constraintTop_toBottomOf="@id/viewDeath" />
+                    app:layout_constraintEnd_toEndOf="@id/guidelineVertical67"
+                    app:layout_constraintStart_toStartOf="@id/guidelineVertical60"
+                    app:layout_constraintTop_toBottomOf="@id/chartWeek" />
 
                 <TextView
                     android:id="@+id/textRecoverChart"
                     style="@style/TextViewLocationTitle"
                     android:layout_marginStart="@dimen/dp_4"
+                    android:layout_marginTop="@dimen/dp_4"
                     android:text="@string/title_recover"
                     android:textSize="@dimen/sp_14"
-                    app:layout_constraintBottom_toBottomOf="@id/viewRecover"
-                    app:layout_constraintStart_toStartOf="@id/guidelineVertical85"
-                    app:layout_constraintTop_toTopOf="@id/viewRecover" />
+                    app:layout_constraintEnd_toEndOf="@id/viewRecover"
+                    app:layout_constraintStart_toStartOf="@id/viewRecover"
+                    app:layout_constraintTop_toBottomOf="@id/viewRecover" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="0dp"
@@ -295,7 +310,7 @@
                     app:layout_constraintDimensionRatio="2.3"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/chartWeek">
+                    app:layout_constraintTop_toBottomOf="@id/textTotalChart">
 
                     <TextView
                         android:id="@+id/textContentLocation"
@@ -340,8 +355,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@id/textContentContact"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.0" />
+                        app:layout_constraintTop_toTopOf="parent" />
 
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -362,14 +376,29 @@
                     app:layout_constraintGuide_percent="0.67" />
 
                 <androidx.constraintlayout.widget.Guideline
-                    android:id="@+id/guidelineVertical80"
+                    android:id="@+id/guidelineVertical15"
                     style="@style/GuideLineVertical"
-                    app:layout_constraintGuide_percent="0.8" />
+                    app:layout_constraintGuide_percent="0.15" />
 
                 <androidx.constraintlayout.widget.Guideline
-                    android:id="@+id/guidelineVertical85"
+                    android:id="@+id/guidelineVertical22"
                     style="@style/GuideLineVertical"
-                    app:layout_constraintGuide_percent="0.85" />
+                    app:layout_constraintGuide_percent="0.22" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guidelineVertical40"
+                    style="@style/GuideLineVertical"
+                    app:layout_constraintGuide_percent="0.4" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guidelineVertical47"
+                    style="@style/GuideLineVertical"
+                    app:layout_constraintGuide_percent="0.47" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guidelineVertical60"
+                    style="@style/GuideLineVertical"
+                    app:layout_constraintGuide_percent="0.60" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </ScrollView>
     </androidx.constraintlayout.widget.ConstraintLayout>

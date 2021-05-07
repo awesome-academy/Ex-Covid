@@ -3,4 +3,17 @@ package com.sun.excovid19.utils
 object AppConstant {
     const val BASE_COVID_URL = "https://public.api.quarantine.country/"
     const val DEFAULT_COUNTRY = "vietnam"
+    const val DEFAULT_LABEL = ""
+    const val SUPPORT_PHONE_NUMBER = "18001096"
+    const val TOP_MARGIN_CHART = 20f
+    const val MINIMUM_CHART = 0f
+    const val AXIS_MINIMUM_CHART = 1f
+    const val AXIS_MAXIMUM_CHART = 5f
+    const val GROUP_SPACE_CHART = 0.1f
+    const val BAR_WITH = 0.3f
+    const val DEFAULT_RED_TOTAL = 255
+    const val DEFAULT_GREEN_TOTAL = 186
+    const val DEFAULT_BLUE_TOTAL = 92
+    const val DEFAULT_RED_DEATH = 92
+    const val DEFAULT_GREEN_DEATH = 165
 }

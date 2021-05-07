@@ -40,8 +40,8 @@ class HomeViewModel(
         val ratios = mutableListOf<PieEntry>()
         worldData.value?.let {
             ratios.apply {
-                add(PieEntry(it.recoverRatio))
-                add(PieEntry(it.deathsRatio))
+                add(PieEntry(it.recoverRatio.toFloat()))
+                add(PieEntry(it.deathsRatio.toFloat()))
                 _ratioData.value = this
             }
         }
