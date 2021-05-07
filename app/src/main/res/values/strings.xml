@@ -29,8 +29,8 @@
     <string name="title_contract">Contract</string>
     <string name="title_search">Search</string>
     <string name="text_vietnam">Viet Nam</string>
-    <string name="title_critical">Critical</string>
     <string name="title_death_ratio">Death Ratio</string>
     <string name="title_recover_ratio">Recover Ratio</string>
     <string name="location_fragment">LocationFragment</string>
+    <string name="title_critical">Critical</string>
 </resources>

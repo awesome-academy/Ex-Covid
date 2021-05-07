@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <data>
+
+        <variable
+            name="day"
+            type="com.sun.excovid19.data.model.World" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/bg_bottom_sheet"
@@ -24,7 +31,9 @@
         <TextView
             android:id="@+id/textDate"
             style="@style/TextViewLocationTitle"
-            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginBottom="@dimen/dp_24"
+            android:layout_marginTop="@dimen/dp_32"
+            android:text="@{day.date}"
             android:textSize="@dimen/sp_24"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -82,42 +91,49 @@
         <TextView
             android:id="@+id/textTotalDataBottom"
             style="@style/TextViewBottomSheetEnd"
+            android:text="@{day.totalCases}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/textDate" />
 
         <TextView
             android:id="@+id/textDeathDataBottom"
             style="@style/TextViewBottomSheetEnd"
+            android:text="@{day.deaths}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/textTotalDataBottom" />
 
         <TextView
             android:id="@+id/textRecoverDataBottom"
             style="@style/TextViewBottomSheetEnd"
+            android:text="@{day.recovered}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/textDeathDataBottom" />
 
         <TextView
             android:id="@+id/textCriticalDataBottom"
             style="@style/TextViewBottomSheetEnd"
+            android:text="@{day.critical}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/textRecoverDataBottom" />
 
         <TextView
             android:id="@+id/textTestedDataBottom"
             style="@style/TextViewBottomSheetEnd"
+            android:text="@{day.tested}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/textCriticalDataBottom" />
 
         <TextView
             android:id="@+id/textDeathRatioDataBottom"
             style="@style/TextViewBottomSheetEnd"
+            android:text="@{day.deathsRatio}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/textTestedDataBottom" />
 
         <TextView
             android:id="@+id/textRecoverRatioDataBottom"
             style="@style/TextViewBottomSheetEnd"
+            android:text="@{day.recoverRatio}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/textDeathRatioDataBottom" />
     </androidx.constraintlayout.widget.ConstraintLayout>

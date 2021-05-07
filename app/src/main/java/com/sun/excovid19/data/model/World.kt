@@ -1,7 +1,10 @@
 package com.sun.excovid19.data.model
 
+import android.os.Parcelable
 import com.squareup.moshi.Json
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 data class World(
     @field:Json(name = "total_cases")
     val totalCases: String,
@@ -16,8 +19,8 @@ data class World(
     @field:Json(name = "tested")
     val tested: String,
     @field:Json(name = "death_ratio")
-    val deathsRatio: Float,
+    val deathsRatio: String,
     @field:Json(name = "recovery_ratio")
-    val recoverRatio: Float,
+    val recoverRatio: String,
     var date: String
-)
+) : Parcelable

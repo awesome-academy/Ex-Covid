@@ -6,8 +6,22 @@
 
     <fragment
         android:id="@+id/navigationHome"
-        android:name="com.sun.excovid19.ui.home.HomeFragment"/>
+        android:name="com.sun.excovid19.ui.home.HomeFragment" />
     <fragment
         android:id="@+id/navigationLocation"
-        android:name="com.sun.excovid19.ui.location.LocationFragment"/>
+        android:name="com.sun.excovid19.ui.location.LocationFragment">
+        <action
+            android:id="@+id/actionLocationFragmentToBottomFragment"
+            app:destination="@id/bottomSheetFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/bottomSheetFragment"
+        android:name="com.sun.excovid19.ui.location.LocationBottomSheetFragment">
+        <action
+            android:id="@+id/actionBottomFragmentToLocationFragment"
+            app:destination="@id/navigationLocation" />
+        <argument
+            android:name="day"
+            app:argType="com.sun.excovid19.data.model.World" />
+    </dialog>
 </navigation>
