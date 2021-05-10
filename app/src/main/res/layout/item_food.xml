@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp_8"
+    android:background="@drawable/shape_item_food">
+
+    <ImageView
+        android:id="@+id/imageFood"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/description_image_content"
+        android:src="@drawable/logo"
+        app:layout_constraintDimensionRatio="1.7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textFoodName"
+        style="@style/TextViewLocationTitle"
+        android:layout_marginVertical="@dimen/dp_8"
+        android:text="@string/title_search"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageFood" />
+
+    <TextView
+        android:id="@+id/textCalories"
+        style="@style/TextViewBottomSheet"
+        android:layout_marginVertical="@dimen/dp_8"
+        android:text="@string/title_calories"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textFoodName" />
+
+    <TextView
+        android:id="@+id/textFat"
+        style="@style/TextViewBottomSheet"
+        android:layout_marginVertical="@dimen/dp_8"
+        android:text="@string/title_fat"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textCalories" />
+
+    <TextView
+        android:id="@+id/textTitleVitaminA"
+        style="@style/TextViewBottomSheet"
+        android:layout_marginVertical="@dimen/dp_8"
+        android:text="@string/title_item_vitamina"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textFat" />
+
+    <TextView
+        android:id="@+id/textTitleVitaminC"
+        style="@style/TextViewBottomSheet"
+        android:layout_marginVertical="@dimen/dp_8"
+        android:text="@string/title_item_vitaminc"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textTitleVitaminA" />
+
+    <TextView
+        android:id="@+id/textTitleProtein"
+        style="@style/TextViewBottomSheet"
+        android:layout_marginTop="@dimen/dp_8"
+        android:layout_marginBottom="@dimen/dp_24"
+        android:text="@string/title_item_protein"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textTitleVitaminC" />
+
+    <TextView
+        android:id="@+id/textCaloriesData"
+        style="@style/TextViewBottomSheetEnd"
+        android:layout_marginVertical="@dimen/dp_8"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textFoodName" />
+
+    <TextView
+        android:id="@+id/textFatData"
+        style="@style/TextViewBottomSheetEnd"
+        android:layout_marginVertical="@dimen/dp_8"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textCaloriesData" />
+
+    <TextView
+        android:id="@+id/textVitaminAData"
+        style="@style/TextViewBottomSheetEnd"
+        android:layout_marginVertical="@dimen/dp_8"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textFatData" />
+
+    <TextView
+        android:id="@+id/textVitaminCData"
+        style="@style/TextViewBottomSheetEnd"
+        android:layout_marginVertical="@dimen/dp_8"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textTitleVitaminA" />
+
+    <TextView
+        android:id="@+id/textProteinData"
+        style="@style/TextViewBottomSheetEnd"
+        android:layout_marginVertical="@dimen/dp_8"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textTitleVitaminC" />
+</androidx.constraintlayout.widget.ConstraintLayout>
