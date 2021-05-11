@@ -33,4 +33,6 @@
     <string name="title_recover_ratio">Recover Ratio</string>
     <string name="location_fragment">LocationFragment</string>
     <string name="title_critical">Critical</string>
+    <string name="title_breaking_news">Breaking News</string>
+    <string name="title_back">Back</string>
 </resources>

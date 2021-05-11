@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="@dimen/dp_4"
+    android:background="@drawable/shape_text_guidance">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardNews"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/dp_4"
+        android:backgroundTint="@android:color/white"
+        app:cardCornerRadius="@dimen/sp_16"
+        app:cardElevation="0dp"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toEndOf="@id/guidelineVertical30"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageNews"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/logo" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textNewsContents"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bree_serif"
+        android:gravity="start"
+        android:padding="@dimen/dp_8"
+        android:text="@string/title_search"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guidelineVertical30"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textDateNews"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bree_serif"
+        android:gravity="start"
+        android:padding="@dimen/dp_8"
+        android:text="@string/title_search"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guidelineVertical30" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVertical30"
+        style="@style/GuideLineVertical"
+        app:layout_constraintGuide_percent="0.3" />
+</androidx.constraintlayout.widget.ConstraintLayout>
