@@ -35,4 +35,17 @@
     <string name="title_critical">Critical</string>
     <string name="title_breaking_news">Breaking News</string>
     <string name="title_back">Back</string>
+    <string name="text_food_with_at_least">Food with at least:</string>
+    <string name="text_vitamina">- 3000 IU VitaminA</string>
+    <string name="text_vitaminc">- 65mg VitaminC</string>
+    <string name="text_protein">- 50g Protein</string>
+    <string name="text_enpower">protect your health to prevent Covid.</string>
+    <string name="text_mina">MinA</string>
+    <string name="text_protein_hint">Protein</string>
+    <string name="text_minc">MinC</string>
+    <string name="title_calories">Calories:</string>
+    <string name="title_fat">Fat:</string>
+    <string name="title_item_vitamina">VitaminA:</string>
+    <string name="title_item_vitaminc">VitaminC:</string>
+    <string name="title_item_protein">Protein:</string>
 </resources>
