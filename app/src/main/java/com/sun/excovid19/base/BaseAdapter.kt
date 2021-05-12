@@ -11,7 +11,7 @@ abstract class BaseAdapter<T, VH : BaseViewHolder<T>>(
         holder.bindData(getItem(position))
     }
 
-    override fun setData(data: List<T>?) {
+    override fun setData(data: List<T>) {
         submitList(data)
     }
 }

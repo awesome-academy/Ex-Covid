@@ -1,6 +1,7 @@
 package com.sun.excovid19.data.model
 
 import android.os.Parcelable
+import androidx.recyclerview.widget.DiffUtil
 import com.sun.excovid19.utils.AppConstant
 import kotlinx.android.parcel.Parcelize
 import org.simpleframework.xml.Element
@@ -26,4 +27,13 @@ data class RSSItem(
         AppConstant.DEFAULT_LABEL,
         AppConstant.DEFAULT_LABEL
     )
+
+    companion object {
+        val diffUtil = object : DiffUtil.ItemCallback<RSSItem>() {
+            override fun areItemsTheSame(oldItem: RSSItem, newItem: RSSItem) =
+                oldItem.title == newItem.title
+
+            override fun areContentsTheSame(oldItem: RSSItem, newItem: RSSItem) = oldItem == newItem
+        }
+    }
 }
