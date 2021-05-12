@@ -21,7 +21,6 @@ class MyApplication : Application() {
                     viewModelModule
                 )
             )
-
         }
     }
 }

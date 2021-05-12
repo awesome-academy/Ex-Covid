@@ -70,6 +70,7 @@ dependencies {
     implementation "com.squareup.retrofit2:converter-moshi:2.6.2"
     implementation "com.squareup.retrofit2:retrofit:2.9.0"
     implementation 'com.squareup.retrofit2:adapter-rxjava3:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-simplexml:2.2.0'
 
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"

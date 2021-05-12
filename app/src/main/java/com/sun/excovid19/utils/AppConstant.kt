@@ -2,6 +2,11 @@ package com.sun.excovid19.utils
 
 object AppConstant {
     const val BASE_COVID_URL = "https://public.api.quarantine.country/"
+    const val BASE_COVID_NEWS_URL = "https://vnexpress.net/"
+    const val NEWS_RETROFIT_NAME = "News Retrofit"
+    const val COVID_RETROFIT_NAME = "Covid Retrofit"
+    const val COVID_SERVICE_NAME = "Covid Service"
+    const val NEWS_SERVICE_NAME = "News Service"
     const val DEFAULT_COUNTRY = "vietnam"
     const val DEFAULT_LABEL = ""
     const val SUPPORT_PHONE_NUMBER = "18001096"
