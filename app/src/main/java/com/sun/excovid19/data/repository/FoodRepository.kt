@@ -7,7 +7,6 @@ interface FoodRepository {
     fun getFoods(
         minVitaminA: String,
         minVitaminC: String,
-        minProtein: String,
-        itemFood: String
+        minProtein: String
     ): Observable<List<Food>>
 }

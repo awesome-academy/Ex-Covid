@@ -1,9 +1,11 @@
 package com.sun.excovid19.di
 
 import com.sun.excovid19.data.repository.*
+import com.sun.excovid19.data.source.FoodDataSource
 import com.sun.excovid19.data.source.NewsDataSource
 import com.sun.excovid19.data.source.WeekDataSource
 import com.sun.excovid19.data.source.WorldDataSource
+import com.sun.excovid19.data.source.remote.FoodRemoteDataSource
 import com.sun.excovid19.data.source.remote.NewsRemoteDataSource
 import com.sun.excovid19.data.source.remote.WeekRemoteDataSource
 import com.sun.excovid19.data.source.remote.WorldRemoteDataSource
@@ -18,4 +20,6 @@ val repositoryModule = module {
     single<WeekRepository> { WeekRepositoryImpl(get()) }
     single<NewsDataSource> { NewsRemoteDataSource(get(named(AppConstant.NEWS_SERVICE_NAME))) }
     single<NewsRepository> { NewsRepositoryIml(get()) }
+    single<FoodDataSource> { FoodRemoteDataSource(get(named(AppConstant.FOOD_SERVICE_NAME))) }
+    single<FoodRepository> { FoodRepositoryImp(get()) }
 }

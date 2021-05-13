@@ -15,6 +15,9 @@
             app:destination="@id/bottomSheetFragment" />
     </fragment>
     <fragment
+        android:id="@+id/navigationFood"
+        android:name="com.sun.excovid19.ui.food.FragmentFood" />
+    <fragment
         android:id="@+id/navigationNews"
         android:name="com.sun.excovid19.ui.news.NewsFragment">
         <action

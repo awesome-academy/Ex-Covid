@@ -39,7 +39,17 @@ val networkModule = module {
             .build()
     }
 
+    fun initRetrofitFood(client: OkHttpClient): Retrofit {
+        return Retrofit.Builder()
+            .baseUrl(AppConstant.BASE_FOOD_URL)
+            .addConverterFactory(MoshiConverterFactory.create())
+            .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
+            .client(client)
+            .build()
+    }
+
     single { initHttpClient() }
     single(named(AppConstant.COVID_RETROFIT_NAME)) { initRetrofit(get()) }
     single(named(AppConstant.NEWS_RETROFIT_NAME)) { initRetrofitNews(get()) }
+    single(named(AppConstant.FOOD_RETROFIT_NAME)) { initRetrofitFood(get()) }
 }
