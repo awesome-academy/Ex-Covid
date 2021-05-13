@@ -1,178 +1,181 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/color_heather">
+<layout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constrainSearchFood"
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/shape_content_home"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="match_parent"
+        android:background="@color/color_heather">
 
-        <ImageView
-            android:id="@+id/imageSearchFood"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constrainSearchFood"
             android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="@dimen/dp_8"
-            android:contentDescription="@string/description_image_content"
-            android:src="@drawable/ic_food"
-            app:layout_constraintDimensionRatio="1"
-            app:layout_constraintEnd_toEndOf="@id/guidelineVertical35"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_content_home"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/textAtLeast"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp_16"
-            android:fontFamily="@font/bree_serif"
-            android:paddingStart="@dimen/dp_8"
-            android:text="@string/text_food_with_at_least"
-            android:textColor="@android:color/white"
-            android:textSize="@dimen/sp_16"
+            <ImageView
+                android:id="@+id/imageSearchFood"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/dp_8"
+                android:contentDescription="@string/description_image_content"
+                android:src="@drawable/ic_food"
+                app:layout_constraintDimensionRatio="1"
+                app:layout_constraintEnd_toEndOf="@id/guidelineVertical40"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textAtLeast"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16"
+                android:fontFamily="@font/bree_serif"
+                android:paddingStart="@dimen/dp_8"
+                android:text="@string/text_food_with_at_least"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/guidelineVertical40"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textVitaminA"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bree_serif"
+                android:paddingStart="@dimen/dp_8"
+                android:text="@string/text_vitamina"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/guidelineVertical40"
+                app:layout_constraintTop_toBottomOf="@id/textAtLeast" />
+
+            <TextView
+                android:id="@+id/textVitaminC"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bree_serif"
+                android:paddingStart="@dimen/dp_8"
+                android:text="@string/text_vitaminc"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/guidelineVertical40"
+                app:layout_constraintTop_toBottomOf="@id/textVitaminA" />
+
+            <TextView
+                android:id="@+id/textProtein"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bree_serif"
+                android:paddingStart="@dimen/dp_8"
+                android:text="@string/text_protein"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/guidelineVertical40"
+                app:layout_constraintTop_toBottomOf="@id/textVitaminC" />
+
+            <TextView
+                android:id="@+id/textEnpower"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_32"
+                android:fontFamily="@font/bree_serif"
+                android:paddingStart="@dimen/dp_8"
+                android:text="@string/text_enpower"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/guidelineVertical40"
+                app:layout_constraintTop_toBottomOf="@id/textProtein" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineVertical40"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.4" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <EditText
+            android:id="@+id/textSearchVitaminA"
+            style="@style/TextViewSearch"
+            android:layout_marginStart="@dimen/sp_16"
+            android:background="@drawable/shape_text_location"
+            android:hint="@string/text_mina"
+            android:paddingHorizontal="@dimen/dp_16"
+            android:paddingVertical="@dimen/dp_8"
+            app:layout_constraintBottom_toBottomOf="@id/constrainSearchFood"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/constrainSearchFood" />
+
+        <EditText
+            android:id="@+id/textSearchVitaminC"
+            style="@style/TextViewSearch"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:background="@drawable/shape_text_location"
+            android:hint="@string/text_minc"
+            android:paddingHorizontal="@dimen/sp_16"
+            android:paddingVertical="@dimen/dp_8"
+            app:layout_constraintBottom_toBottomOf="@id/constrainSearchFood"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@id/guidelineVertical35"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@id/constrainSearchFood" />
 
-        <TextView
-            android:id="@+id/textVitaminA"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/bree_serif"
-            android:paddingStart="@dimen/dp_8"
-            android:text="@string/text_vitamina"
-            android:textColor="@android:color/white"
-            android:textSize="@dimen/sp_16"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@id/guidelineVertical35"
-            app:layout_constraintTop_toBottomOf="@id/textAtLeast" />
+        <EditText
+            android:id="@+id/textSearchProtein"
+            style="@style/TextViewSearch"
+            android:background="@drawable/shape_text_location"
+            android:hint="@string/text_protein_hint"
+            android:paddingHorizontal="@dimen/sp_16"
+            android:paddingVertical="@dimen/dp_8"
+            app:layout_constraintBottom_toBottomOf="@id/constrainSearchFood"
+            app:layout_constraintEnd_toStartOf="@id/textSearchVitaminC"
+            app:layout_constraintStart_toEndOf="@id/textSearchVitaminA"
+            app:layout_constraintTop_toBottomOf="@id/constrainSearchFood" />
 
-        <TextView
-            android:id="@+id/textVitaminC"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/bree_serif"
-            android:paddingStart="@dimen/dp_8"
-            android:text="@string/text_vitaminc"
-            android:textColor="@android:color/white"
-            android:textSize="@dimen/sp_16"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@id/guidelineVertical35"
-            app:layout_constraintTop_toBottomOf="@id/textVitaminA" />
-
-        <TextView
-            android:id="@+id/textProtein"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/bree_serif"
-            android:paddingStart="@dimen/dp_8"
-            android:text="@string/text_protein"
-            android:textColor="@android:color/white"
-            android:textSize="@dimen/sp_16"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@id/guidelineVertical35"
-            app:layout_constraintTop_toBottomOf="@id/textVitaminC" />
-
-        <TextView
-            android:id="@+id/textEnpower"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/dp_32"
-            android:fontFamily="@font/bree_serif"
-            android:paddingStart="@dimen/dp_8"
-            android:text="@string/text_enpower"
-            android:textColor="@android:color/white"
-            android:textSize="@dimen/sp_16"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@id/guidelineVertical35"
-            app:layout_constraintTop_toBottomOf="@id/textProtein" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guidelineVertical35"
+        <Button
+            android:id="@+id/buttonFoodSearch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.35" />
+            android:layout_marginTop="@dimen/dp_16"
+            android:background="@drawable/shape_tested_view"
+            android:fontFamily="@font/bree_serif"
+            android:paddingHorizontal="@dimen/dp_32"
+            android:paddingVertical="@dimen/dp_8"
+            android:text="@string/title_search"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textSearchVitaminA" />
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleFood"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/dp_8"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/buttonFoodSearch"
+            app:spanCount="2"
+            tools:itemCount="4"
+            tools:listitem="@layout/item_food" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineVertical10"
+            style="@style/GuideLineVertical"
+            app:layout_constraintGuide_percent="0.1" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <EditText
-        android:id="@+id/textSearchVitaminA"
-        style="@style/TextViewSearch"
-        android:layout_marginStart="@dimen/sp_16"
-        android:background="@drawable/shape_text_location"
-        android:hint="@string/text_mina"
-        android:paddingHorizontal="@dimen/dp_16"
-        android:paddingVertical="@dimen/dp_8"
-        app:layout_constraintBottom_toBottomOf="@id/constrainSearchFood"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/constrainSearchFood" />
-
-    <EditText
-        android:id="@+id/textSearchVitaminC"
-        style="@style/TextViewSearch"
-        android:layout_marginEnd="@dimen/dp_16"
-        android:background="@drawable/shape_text_location"
-        android:hint="@string/text_minc"
-        android:paddingHorizontal="@dimen/sp_16"
-        android:paddingVertical="@dimen/dp_8"
-        app:layout_constraintBottom_toBottomOf="@id/constrainSearchFood"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/constrainSearchFood" />
-
-    <EditText
-        android:id="@+id/textSearchProtein"
-        style="@style/TextViewSearch"
-        android:background="@drawable/shape_text_location"
-        android:hint="@string/text_protein_hint"
-        android:paddingHorizontal="@dimen/sp_16"
-        android:paddingVertical="@dimen/dp_8"
-        app:layout_constraintBottom_toBottomOf="@id/constrainSearchFood"
-        app:layout_constraintEnd_toStartOf="@id/textSearchVitaminC"
-        app:layout_constraintStart_toEndOf="@id/textSearchVitaminA"
-        app:layout_constraintTop_toBottomOf="@id/constrainSearchFood" />
-
-    <Button
-        android:id="@+id/buttonFoodSearch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_16"
-        android:background="@drawable/shape_tested_view"
-        android:fontFamily="@font/bree_serif"
-        android:paddingHorizontal="@dimen/dp_32"
-        android:paddingVertical="@dimen/dp_8"
-        android:text="@string/title_search"
-        android:textAllCaps="false"
-        android:textColor="@android:color/black"
-        android:textSize="@dimen/sp_16"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textSearchVitaminA" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycleFood"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_margin="@dimen/dp_8"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/buttonFoodSearch"
-        app:spanCount="2"
-        tools:itemCount="4"
-        tools:listitem="@layout/item_food" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineVertical10"
-        style="@style/GuideLineVertical"
-        app:layout_constraintGuide_percent="0.1" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
