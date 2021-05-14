@@ -9,6 +9,11 @@ object AppConstant {
     const val NEWS_RETROFIT_NAME = "News Retrofit"
     const val NEWS_SERVICE_NAME = "News Service"
 
+    const val BASE_FOOD_URL = "https://api.spoonacular.com/"
+    const val FOOD_RETROFIT_NAME = "Food Retrofit"
+    const val FOOD_SERVICE_NAME = "Food Service"
+    const val FOOD_DEFAULT_NUMBER = "10"
+
     const val DEFAULT_START = 9
     const val DEFAULT_END = 3
     const val SPLIT_STRING = "<"

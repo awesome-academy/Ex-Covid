@@ -4,7 +4,6 @@ import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.sun.excovid19.R
 import com.sun.excovid19.base.BaseFragment
-import com.sun.excovid19.base.UpdateDataAdapter
 import com.sun.excovid19.data.model.RSSItem
 import com.sun.excovid19.databinding.FragmentNewsBinding
 import com.sun.excovid19.ui.adapter.NewsAdapter
