@@ -48,4 +48,8 @@
     <string name="title_item_vitamina">VitaminA:</string>
     <string name="title_item_vitaminc">VitaminC:</string>
     <string name="title_item_protein">Protein:</string>
+    <string name="title_internet">Internet Permission</string>
+    <string name="text_warning">Please allow internet to use app</string>
+    <string name="titke_ok">Ok</string>
+    <string name="title_cancel">Cancle</string>
 </resources>
